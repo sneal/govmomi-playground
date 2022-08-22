@@ -62,7 +62,7 @@ func doThings(ctx context.Context, dc, cluster, evcMode, vmName string) error {
 	}
 
 	// find a cluster
-	clusterObj, err := find.NewFinder(c.Client).ClusterComputeResourceOrDefault(ctx, cluster)
+	clusterObj, err := finder.ClusterComputeResourceOrDefault(ctx, cluster)
 	if err != nil {
 		return err
 	}
